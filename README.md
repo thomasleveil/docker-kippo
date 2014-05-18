@@ -7,6 +7,25 @@ Kippo will listen on port 2222
 
 
 
+	
+Running
+-------
+
+    docker run -d -p 2222:2222 tomdesinto/kippo
+
+
+
+### with make
+
+    make run
+	
+The container will map port 2222. Change this in the `Makefile`.
+
+Use `docker logs` to read kippo log
+	
+	
+	
+	
 Building
 --------
 
@@ -14,16 +33,6 @@ Building
 	cd docker-kippo
 	make build
 	
-	
-	
-Running
--------
-
-    make run
-	
-The container will map port 2222. Change this in the `Makefile`.
-
-Use `docker logs` to read kippo log
 	
 	
 Other
