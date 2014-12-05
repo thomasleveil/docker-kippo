@@ -1,9 +1,6 @@
 FROM ubuntu:trusty
 MAINTAINER Thomas Léveil <thomasleveil@gmail.com>
 
-COPY build/ /tmp/build/
-
-RUN bash /tmp/build/setup-apt-mirrors.sh
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y install python-dev openssl python-openssl python-pyasn1 python-twisted git
 
@@ -14,7 +11,6 @@ RUN chown kippo /kippo-app -R
 
 
 # Clean up when done.
-RUN rm -r /tmp/build/
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 2222
