@@ -1,17 +1,26 @@
-# docker-kippo
+# Kippo
+
+[![](https://images.microbadger.com/badges/image/tomdesinto/kippo.svg)](https://microbadger.com/images/tomdesinto/kippo "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/tomdesinto/kippo.svg)](https://microbadger.com/images/tomdesinto/kippo "Get your own version badge on microbadger.com")
+
+SSH Honeypot
 
 
-Dockerfile building an image with [kippo](https://github.com/desaster/kippo) ssh honeypot ready to go.
+Docker image running [Kippo](https://github.com/desaster/kippo) SSH honeypot.
 
 By Default, Kippo will listen on port 2222
+
+
 
 # Running
 
 ```bash
-docker run -d -p 2222:2222 --name kippo tomdesinto/kippo
+docker run -d -p 2222:2222 tomdesinto/kippo
 ```
 
 Use `docker logs -f kippo` to read kippo log
+
+
 
 ## Building
 
