@@ -1,16 +1,9 @@
-FROM ubuntu:trusty
-MAINTAINER Thomas Léveil <thomasleveil@gmail.com>
+FROM python:2.7
 
-RUN apt-get update \
-  && apt-get -q -y install \
-    git \
-    openssl \
-    python-dev \
-    python-openssl \
-    python-pyasn1 \
-    python-twisted \
-  && apt-get clean \
-  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN pip install \
+  twisted==15.1.0 \
+  pyasn1 \
+  pycrypto
 
 RUN useradd -d /kippo -s /bin/bash -m kippo -g sudo
 RUN git clone -q --depth 1 https://github.com/desaster/kippo.git /kippo-app
