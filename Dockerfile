@@ -1,7 +1,7 @@
 FROM python:2.7
 
 # see https://github.com/desaster/kippo/wiki/Running-Kippo for dependencies' list
-RUN pip install \
+RUN pip install --no-cache-dir \
   twisted==15.1.0 \
   pyasn1 \
   pycrypto
