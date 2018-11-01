@@ -5,6 +5,8 @@
 
 SSH Honeypot
 
+> **NOTE:** Kippo is not maintained anymore. Use [Cowrie](https://hub.docker.com/r/cowrie/cowrie/) instead
+
 
 Docker image running [Kippo](https://github.com/desaster/kippo) SSH honeypot.
 
